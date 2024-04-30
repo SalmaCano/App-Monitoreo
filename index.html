@@ -1,0 +1,201 @@
+<DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Monitoreo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 2;
+        }
+
+        body {
+            margin-bottom: 100px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        main {
+            margin-top: 70px;
+        }
+
+        .card {
+            border: none;
+            /* Elimina los bordes */
+        }
+
+        .card-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        #planocasa {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        #focoRecamara {
+            position: absolute;
+            width: 5%;
+            top: 70%;
+            height: auto;
+            left: 70%;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+        }
+
+        #alarma {
+            position: absolute;
+            width: 5%;
+            top: 15%;
+            height: auto;
+            left: 52.1%;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+        }
+
+        #focoSala {
+            position: absolute;
+            width: 8%;
+            top: 65%;
+            height: auto;
+            left: 35%;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+        }
+
+        #ventilador {
+            position: absolute;
+            width: 10%;
+            top: 50%;
+            height: auto;
+            left: 55%;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+        }
+
+        .focoJardin {
+            position: absolute;
+            width: 10%;
+            height: auto;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+        }
+
+        .cortinas {
+            position: absolute;
+            width: 7%;
+            height: auto;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+        }
+
+        .camaras {
+            position: absolute;
+            width: 8%;
+            height: auto;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+        }
+
+      
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    
+        
+                    <span class="fw-bold">App Monitoreo Casa Inteligente </span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <div class="container">
+            <div class="card">
+                <div class="card-body card-content">
+                    <audio id="alarmaEncendida" src="alarmacasa.mp3"></audio>
+                    <audio id="sonidoApagado" src="alarmaOff.mp3"></audio>
+                    <img src="planocasa.jpeg" alt="planocasa" id="planocasa" class="img-fluid">
+                    <img src="imágenes/lampararecamaraoff.png" alt="Foco de la Recámara" id="focoRecamara" class="foco">
+                    <img src="imágenes/focoSalaOff.png" alt="Foco de la sala" id="focoSala" class="foco">
+
+        
+                    <img src="imágenes/focojardinoff.png" alt="Foco del jardín" class="focoJardin"
+                        style="top: 10%; left: 10%;">
+                    <img src="imágenes/focojardinoff.png" alt="Foco del jardín" class="focoJardin"
+                        style="top: 85%; left: 10%;">
+                    <img src="imágenes/focojardinoff.png" alt="Foco del jardín" class="focoJardin"
+                        style="top: 8%; left: 52%;">
+                    <img src="imágenes/focojardinoff.png" alt="Foco del jardín" class="focoJardin"
+                        style="top: 10%; left: 85%;">
+                    <img src="imágenes/focojardinoff.png" alt="Foco del jardín" class="focoJardin"
+                        style="top: 85%; left: 85%;">
+                    <img src="imágenes/ventiladortecho.png" alt="ventilador" id="ventilador" class="foco">
+                    
+                    <img src="imágenes/cortinascerradas.png" alt="Cortinas" class="cortinas"
+                    style="top: 20%; left: 35%;">
+                    <img src="imágenes/cortinascerradas.png" alt="Cortinas" class="cortinas"
+                    style="top: 20%; left: 42%;">
+                    <img src="imágenes/cortinascerradas.png" alt="Cortinas" class="cortinas"
+                    style="top: 70%; left: 75%;">
+
+                    <img src="imágenes/camaraseguridadoff.png" alt="camaras" class="camaras"
+                    style="top: 93%; left: 90%;">
+                    <img src="imágenes/camaraseguridadoff.png" alt="camaras" class="camaras"
+                    style="top: 93%; left: 15%;">
+                    <img src="imágenes/camaraseguridadoff.png" alt="camaras" class="camaras"
+                    style="top: 10%; left: 70%;">
+
+                    <img src="imágenes/alarma-apagada.png" alt="alarma" id="alarma" class="foco">
+                   
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="footer mt- py-3 bg-light">
+        <div class="container text-center">
+            <span class="text-muted">Todos los derechos reservados. Salmai Cano Sierra © 2024 </span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+
+</body>
+
+</html>
